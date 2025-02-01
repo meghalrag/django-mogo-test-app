@@ -28,4 +28,8 @@ jobs:
         ssh -T -o StrictHostKeyChecking=no -i private_key.pem ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
           cd test-app/django-mogo-test-app
           git pull origin master
+          source env/bin/activate
+          pip install -r requirements.txt
+          fuser -k 8000/tcp
+          python manage.py runserver 0:8000
         EOF
