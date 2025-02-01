@@ -1,0 +1,1 @@
+# django-mogo-test-app
