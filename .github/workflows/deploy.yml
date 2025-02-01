@@ -28,7 +28,7 @@ jobs:
         ssh -o StrictHostKeyChecking=no -i private_key.pem ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
           cd djangomongo-app/django-mogo-test-app/
           git pull origin master
-          conda activate env  # Activate the virtual environment if using one
+          source venv/bin/activate  # Activate the virtual environment if using one
           pip install -r requirements.txt  # Install new dependencies
           fuser -k 8000/tcp  # Kill the server
           python manage.py runserver  0:8000 # Restart the server
