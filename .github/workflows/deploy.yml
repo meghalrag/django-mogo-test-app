@@ -25,7 +25,7 @@ jobs:
 
     - name: Deploy to EC2
       run: |
-        ssh -i "private_key.pem" ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}
+        ssh -i private_key.pem ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}
           cd djangomongo-app/django-mogo-test-app/
           git pull origin master
           conda activate env  # Activate the virtual environment if using one
