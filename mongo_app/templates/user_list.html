@@ -1,15 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User List</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
-    <h2 style="background-color:yellow">User List</h2>
-    <ul>
-        {% for user in users %}
-            <li>{{ user.name }} ({{ user.email }}) - Age: {{ user.age }}</li>
-        {% endfor %}
-    </ul>
-    <a href="{% url 'user_form' %}">Add New User</a>
+    <div class="container">
+        <h2>User List</h2>
+        <ul class="user-list">
+            {% for user in users %}
+                <li class="user-item">
+                    <span class="user-name">{{ user.name }}</span> 
+                    <span class="user-email">({{ user.email }})</span> - 
+                    <span class="user-age">Age: {{ user.age }}</span>
+                </li>
+            {% endfor %}
+        </ul>
+        <a href="{% url 'user_form' %}" class="add-user-btn">Add New User</a>
+    </div>
 </body>
 </html>

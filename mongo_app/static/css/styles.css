@@ -1,0 +1,139 @@
+/* Reset default browser styles */
+body, h2, ul, li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 20px;
+}
+
+/* Center the container */
+.container {
+    max-width: 600px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+}
+
+/* Header Styles */
+h2 {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* User List Styles */
+.user-list {
+    margin-top: 15px;
+}
+
+.user-item {
+    background: #f9f9f9;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.user-item:last-child {
+    border-bottom: none;
+}
+
+/* User Details */
+.user-name {
+    font-weight: bold;
+    color: #007bff;
+}
+
+.user-email {
+    font-style: italic;
+    color: #666;
+}
+
+/* Add User Button */
+.add-user-btn {
+    display: block;
+    width: max-content;
+    background: #28a745;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px auto 0;
+    transition: background 0.3s ease-in-out;
+}
+
+.add-user-btn:hover {
+    background: #218838;
+}
+
+form, input, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.user-form {
+    margin-top: 15px;
+}
+
+.user-form p {
+    margin-bottom: 15px;
+}
+
+/* Form Input Fields */
+.user-form input[type="text"],
+.user-form input[type="email"],
+.user-form input[type="number"],
+.user-form select,
+.user-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+    background: #218838;
+}
+
+/* View Users Button */
+.view-users-btn {
+    display: block;
+    width: max-content;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-align: center;
+    margin: 20px auto 0;
+    transition: background 0.3s ease-in-out;
+}
+
+.view-users-btn:hover {
+    background: #0056b3;
+}
