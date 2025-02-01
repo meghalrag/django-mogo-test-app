@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User List</title>
+</head>
+<body>
+    <h2>User List</h2>
+    <ul>
+        {% for user in users %}
+            <li>{{ user.name }} ({{ user.email }}) - Age: {{ user.age }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'user_form' %}">Add New User</a>
+</body>
+</html>
