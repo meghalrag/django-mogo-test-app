@@ -28,7 +28,8 @@ jobs:
         ssh -t -o StrictHostKeyChecking=no -i private_key.pem ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} << 'EOF'
           cd test-app/django-mogo-test-app
           git pull origin master
-          source ../../env/bin/activate
           fuser -k 8000/tcp
-          gunicorn --bind 0.0.0.0:8000 mongo_project.wsgi:application
+          source ../../env/bin/activate
+          pkill gunicorn
+          nohup gunicorn --bind 0.0.0.0:8000 mongo_project.wsgi:application > gunicorn.log 2>&1 &
         EOF
